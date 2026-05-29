@@ -1,5 +1,8 @@
+# test_calculator.py
+ 
 import pytest
 from calculator import add, subtract, multiply, divide
+ 
  
 class TestAdd:
     def test_positive(self):
@@ -11,13 +14,16 @@ class TestAdd:
     def test_zeros(self):
         assert add(0, 0) == 0
  
+ 
 class TestSubtract:
     def test_basic(self):
         assert subtract(10, 4) == 6
  
+ 
 class TestMultiply:
     def test_basic(self):
         assert multiply(3, 4) == 12
+ 
  
 class TestDivide:
     def test_basic(self):
@@ -26,3 +32,4 @@ class TestDivide:
     def test_zero_division(self):
         with pytest.raises(ValueError):
             divide(5, 0)
+
